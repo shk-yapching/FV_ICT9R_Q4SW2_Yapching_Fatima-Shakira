@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Q4 Seatwork 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+</head>
+<style>
+	body{
+		font-family: courier;
+	}
+    #box{
+    	background-color: dimgray;
+    	border: 5px solid black;
+    }
+
+</style>
+<body>
+<center>
+<br><br>
+<div class="col-md-3" id="box">
+	<br>
+	<h2 class="bg-light">CALCULATOR</h2>
+	<form class="form-group">
+		<br>
+		<label><b>Enter a value for x:</b></label>
+			<input type="number" class="form-control" id="x">
+			<br>
+		<label><b>Enter a value for y:</b></label>
+			<input type="number" class="form-control" id="y">
+			<br>
+			<details ontoggle="message()">
+				<summary>Click here</summary>
+				<i>Click the buttons below to calculate.</i>
+			</details>
+			<br>
+			<button class="bg-info btn-block" type="submit" id="submit" onclick="add()">Add x and y</button>
+			<br>
+			<button class="bg-warning btn-block" type="submit" id="submit" onclick="subtract()">Subtract x and y</button> 
+			<br>
+			<button class="bg-danger btn-block" type="submit" id="submit" onclick="equal()">Check if x is equal to y</button>
+			<br>
+			<button class="bg-success btn-block" type="submit" id="submit" onclick="divide()">Get the remainder of x and y</button>
+	</form>
+</div>
+</center>
+<script type="text/javascript"> 
+function add(){
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	var add = Number(x) + Number(y);
+	
+	alert(add);
+}
+function subtract(){
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	var subtract = Number(x) - Number(y);
+	
+	alert(subtract);
+}
+function equal(){
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	var multiply = Number(x) == Number(y);
+	
+	alert(equal);
+	//EQUAL IF NUMBER IS THE SAME
+}
+function divide(){
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	var divide = Number(x) % Number(y);
+	
+	alert(divide);
+}
+
+</script>
+</center>
+</body>
+</html>  
